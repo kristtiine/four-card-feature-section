@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root {
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --very-dark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --very-light-gray: hsl(0, 0%, 98%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;   
+}
+
+h1, h2, h3 {color: var(--very-dark-blue);}
+h1, h2 {font-size: 1.6em;}
+h1 {font-weight: 200;}
+h2 {font-weight: 600;}
+
+p {
+    font-weight: 400;
+    color: var(--grayish-blue);
+}
+
+.header {
+    text-align: center;
+    margin: 70px 33px 60px;
+}
+
+.header p {
+    margin: 20px 0;
+    font-size: 1em;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 70px;
+}
+
+.first-column,
+.middle-column,
+.last-column {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    margin: 13px 33px;
+    height: 220px;
+    width: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1), 0 10px 15px hsla(212, 86%, 64%, 0.2);
+    border-radius: 6px;
+    position: relative;
+}
+
+.card h3 {
+    font-size: 1.3em;
+    margin: 25px 0 5px 25px;
+}
+.card p {
+    font-size: 0.9em;
+    margin: 0 25px;
+    line-height: 1.8;
+}
+
+.card img {
+    display: block;
+    right: 25px;
+    bottom: 20px;
+    position: absolute;
+    transform: scale(.9);
+}
+
+.supervisor {border-top: 4px solid var(--cyan);}
+
+.team-builder {border-top: 4px solid var(--red);}
+
+.karma {border-top: 4px solid var(--orange);}
+
+.calculator {border-top: 4px solid var(--blue);}
+
+@media screen and (min-width: 1440px) {
+    h1, h2 {font-size: 2.4em;}
+    
+    .header {
+        width: 500px;
+        margin: 70px auto 60px;
+    }
+
+    .container {
+        flex-flow: row nowrap;
+        justify-content: center;
+    }
+
+    .first-column,
+    .middle-column,
+    .last-column {
+        flex-direction: column;
+    }
+
+    .first-column,
+    .last-column {
+        justify-content: center;
+    }
+
+    .middle-column > .card {
+        margin: 13px 0;
+    }
+
+    .card {
+        width: 350px;
+    }
+
+    
+}
